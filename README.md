@@ -1,5 +1,5 @@
 # API Wrapper for CoinStats
- A simple API wrapper for the v1 version of [coinstats.app](coinstats.app) written in .NET 4.8 framework. 
+ A simple API wrapper for the v1 version of [coinstats.app](https://coinstats.app) written in .NET 4.8 framework. 
 The documentation for the API can be found in the following [link](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3)
 
 # Components
@@ -127,4 +127,10 @@ List<NewsData> defaultHandpicked = await HandPickedNewsAPI.GetHandPickedNews();
 List<NewsData> customHandpicked = await HandPickedNewsAPI.GetHandPickedNews(1,3);
 ```
 
-# Enumerations
+##To do
+
+Many things can still be improved, however due to lack of time I won't be able to invest any more time within this project. 
+ - [ ] Documentation can be improved + expanded
+ - [ ] Code can be optimized / improved
+ - [ ] NuGet package needs to be updated
+ - [ ] Include more examples
