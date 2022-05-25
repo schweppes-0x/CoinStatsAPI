@@ -12,9 +12,9 @@ namespace CoinStatsAPI
         public float price { get; set; }
         public float priceBtc { get; set; }
         public float volume { get; set; }
-        public int marketCap { get; set; }
-        public int availableSupply { get; set; }
-        public int totalSupply { get; set; }
+        public float marketCap { get; set; }
+        public float availableSupply { get; set; }
+        public float totalSupply { get; set; }
         public float priceChange1h { get; set; }
         public float priceChange1d { get; set; }
         public float priceChange1w { get; set; }

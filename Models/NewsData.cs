@@ -2,10 +2,10 @@ using System.Collections.Generic;
 
 namespace CoinStatsAPI
 {
-    internal class NewsData
+    public class NewsData
     {
         public string id { get; set; }
-        public int feedDate { get; set; }
+        public long feedDate { get; set; }
         public string source { get; set; }
         public string title { get; set; }
         public bool isFeatured { get; set; }

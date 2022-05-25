@@ -1,14 +1,23 @@
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using CoinStatsAPI;
 
-class NewsAPI : BaseAPI
+public class NewsAPI : BaseAPI
 {
     public const string Endpoint = "/news";
 
-    public static async Task<NewsResponse> GetNewsAsync(int fromDate, int toDate, int skip = 0, int limit = 20)
+    public static async Task<List<NewsData>> GetNewsAsync(long fromDate = -1, long toDate = -1, int skip = 0, int limit = 20)
     {
-        if (toDate < fromDate)
+        if (toDate < fromDate && toDate != -1)
             return null;
+
+        if (fromDate == -1 && toDate == -1)
+        {
+            fromDate = (DateTimeOffset.Now - TimeSpan.FromDays(1)).ToUnixTimeMilliseconds();
+            toDate =  (DateTimeOffset.Now).ToUnixTimeMilliseconds();
+        }
+
             
         var request = new Request(BaseUrl, Endpoint);
 
@@ -17,6 +26,7 @@ class NewsAPI : BaseAPI
         request.AddProperty(APIProperty.ToDate, toDate);
         request.AddProperty(APIProperty.FromDate, fromDate);
             
-        return await GetDataAsync<NewsResponse>(request);
+        var response = await GetDataAsync<NewsResponse>(request);
+        return response.news;
     }
 }

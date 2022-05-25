@@ -1,17 +1,21 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using CoinStatsAPI;
 
-class HandPickedNewsAPI : BaseAPI
+public class HandPickedNewsAPI : BaseAPI
 {
     public static string Endpoint => $"{NewsAPI.Endpoint}/handpicked";
-
-    public static async Task<HandPickedNewsResponse> GetHandPickedNews(int skip = 0, int limit = 20)
+    public static async Task<List<NewsData>> GetHandPickedNews(int skip = 0, int limit = 20)
     {
         var request = new Request(BaseUrl, Endpoint);
 
-        request.AddProperty(APIProperty.Skip, skip);
-        request.AddProperty(APIProperty.Limit, limit);
+        if(skip > 0)
+            request.AddProperty(APIProperty.Skip, skip);
+        if(limit > 0)
+            request.AddProperty(APIProperty.Limit, limit);
             
-        return await GetDataAsync<HandPickedNewsResponse>(request);
+        var response = await GetDataAsync<NewsResponse>(request);
+        
+        return response.news;
     }
 }

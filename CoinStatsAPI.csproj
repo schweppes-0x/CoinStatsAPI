@@ -84,10 +84,7 @@
         <Compile Include="Models\CoinApiResponse.cs" />
         <Compile Include="Models\ExchangeResponse.cs" />
         <Compile Include="Models\FiatData.cs" />
-        <Compile Include="Models\FiatResponse.cs" />
-        <Compile Include="Models\HandPickedNewsResponse.cs" />
         <Compile Include="Models\MarketData.cs" />
-        <Compile Include="Models\MarketsResponse.cs" />
         <Compile Include="Models\NewsData.cs" />
         <Compile Include="Models\NewsResponse.cs" />
         <Compile Include="Models\Property.cs" />
@@ -97,7 +94,7 @@
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Wrappers\ChartsAPI.cs" />
         <Compile Include="Wrappers\CoinsAPI.cs" />
-        <Compile Include="Wrappers\ExchangeAPI.cs" />
+        <Compile Include="Wrappers\ExchangesAPI.cs" />
         <Compile Include="Wrappers\FiatsAPI.cs" />
         <Compile Include="Wrappers\HandPickedNewsAPI.cs" />
         <Compile Include="Wrappers\MarketsAPI.cs" />
