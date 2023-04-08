@@ -2,6 +2,12 @@
  A simple API wrapper for the v1 version of [coinstats.app](https://coinstats.app) written in .NET 4.8 framework. 
 The documentation for the API can be found in the following [link](https://documenter.getpostman.com/view/5734027/RzZ6Hzr3)
 
+![image](https://user-images.githubusercontent.com/88944709/230719181-2fe739b1-ea6c-4415-94d8-7fe57318fd21.png)
+
+
+![image](https://user-images.githubusercontent.com/88944709/230719268-ac10029f-c233-42d5-85d7-32cb9d6608b7.png)
+
+
 # Components
 These are the components that the wrapper(as of version 1.0.0) currently supports.
 
